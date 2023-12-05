@@ -1,0 +1,28 @@
+use std::path::PathBuf;
+
+use itertools::Itertools;
+use regex::Regex;
+use anyhow::{Result, bail};
+
+use crate::day::Day;
+
+#[derive(Debug, Default)]
+pub struct Day0 {
+    input: String,
+}
+
+impl Day for Day0 {
+    fn read_input(&mut self) -> anyhow::Result<()> {
+        let path = PathBuf::from("./input/day0.txt");
+        self.input = std::fs::read_to_string(path)?;
+        Ok(())
+    }
+
+    fn A(&mut self) -> Result<String> {
+        todo!()
+    }
+
+    fn B(&mut self) -> Result<String> {
+        todo!()
+    }
+}
