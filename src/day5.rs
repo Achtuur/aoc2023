@@ -116,10 +116,6 @@ impl SeedRange {
             len
         }
     }
-
-    pub fn contains(&self, seed: &usize) -> bool {
-        *seed >= self.start && *seed < self.start + self.len
-    }
 }
 
 #[derive(Debug)]
