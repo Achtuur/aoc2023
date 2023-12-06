@@ -22,8 +22,8 @@ impl Day for Day4 {
         Ok(self.input.lines()
         .map(|line| {
             let mut line_split = line.split('|');
-            let winning_numbers: Vec<usize> = line_split.next().unwrap().split(' ').filter_map(|s| s.parse::<usize>().map_or_else(|_| None, Some)).collect();
-            let game_numbers: Vec<usize> = line_split.next().unwrap().split(' ').filter_map(|s| s.parse::<usize>().map_or_else(|_| None, Some)).collect();
+            let winning_numbers: Vec<usize> = line_split.next().unwrap().split(' ').filter_map(|s| s.parse::<usize>().ok()).collect();
+            let game_numbers: Vec<usize> = line_split.next().unwrap().split(' ').filter_map(|s| s.parse::<usize>().ok()).collect();
 
             let mut score = None;
             winning_numbers.iter().for_each(|win_num| {
@@ -47,8 +47,8 @@ impl Day for Day4 {
         .enumerate()
         .map(|(i, line)| {
             let mut line_split = line.split('|');
-            let winning_numbers: Vec<usize> = line_split.next().unwrap().split(' ').filter_map(|s| s.parse::<usize>().map_or_else(|_| None, Some)).collect();
-            let game_numbers: Vec<usize> = line_split.next().unwrap().split(' ').filter_map(|s| s.parse::<usize>().map_or_else(|_| None, Some)).collect();
+            let winning_numbers: Vec<usize> = line_split.next().unwrap().split(' ').filter_map(|s| s.parse::<usize>().ok()).collect();
+            let game_numbers: Vec<usize> = line_split.next().unwrap().split(' ').filter_map(|s| s.parse::<usize>().ok()).collect();
 
             let mut won_cards = 0;
             winning_numbers.iter().for_each(|win_num| {
