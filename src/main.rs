@@ -8,7 +8,7 @@ use day2::Day2;
 use day3::Day3;
 use day4::Day4;
 
-use crate::{day5::Day5, day6::Day6, day7::Day7};
+use crate::{day5::Day5, day6::Day6, day7::Day7, day8::Day8, day9::Day9, day10::Day10, day11::Day11};
 
 pub mod day;
 pub mod day1;
@@ -18,9 +18,14 @@ pub mod day4;
 pub mod day5;
 pub mod day6;
 pub mod day7;
+pub mod day8;
+pub mod day9;
+pub mod util;
+pub mod day10;
+pub mod day11;
 
 fn main() {
-    let mut day = Day7::default();
+    let mut day = Day11::default();
     day.read_input().unwrap();
 
     let timer = Instant::now();

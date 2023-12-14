@@ -45,8 +45,7 @@ impl Day for Day7 {
         })
         .sorted_by(|(hand1, _), (hand2, _)| hand1.partial_cmp(hand2).unwrap())
         .enumerate()
-        .map(|(i, (hand, points))| {
-            // println!("(i, hand): {0:?}", (i, hand, points));
+        .map(|(i, (_, points))| {
             points * (i + 1)
         }).sum::<usize>();
 
