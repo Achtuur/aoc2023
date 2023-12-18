@@ -97,14 +97,14 @@ impl Day for Day10 {
                 }
                 let exp = map[i].enlarged();
 
-                for n in 0..3 {
+                (0..3).for_each(|n| {
                     for m in 0..3 {
                         let new_y = 3 * y + n;
                         let new_x = 3*x + m;
                         let j = new_y * width * 3 + new_x;
                         exp_pipes[j] = exp[n][m];
                     }
-                }
+                });
             }
         }
 
